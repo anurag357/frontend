@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { Country } from '@/types/country'
 
-const BASE_URL = 'http://localhost:4000'
+const BASE_URL = 'https://country-dash-rr0r.onrender.com'
 
 export const getAllCountries = async (): Promise<Country[]> => {
   const res = await axios.get(`${BASE_URL}/countries`)
