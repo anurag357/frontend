@@ -1,6 +1,8 @@
 // components/PopulationChart.tsx
-import { Chart } from 'react-chartjs-2'
+
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js'
+import { Bar } from 'react-chartjs-2'
+import { Country } from '@/types/country'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
@@ -18,5 +20,5 @@ export default function PopulationChart({ countries }: { countries: Country[] })
     ],
   }
 
-  return <Chart type="bar" data={data} />
+  return <Bar data={data} />
 }
