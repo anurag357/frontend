@@ -124,7 +124,7 @@ export default function CountryDetail({ country }: { country: Country }) {
               <strong style={styles.label}>Currency:</strong>{' '}
               {country.currencies
                 ? Object.values(country.currencies)
-                    .map((c: any) => `${c.name} (${c.symbol})`)
+                    .map((c: { name: string; symbol: string }) => `${c.name} (${c.symbol})`)
                     .join(', ')
                 : 'N/A'}
             </p>

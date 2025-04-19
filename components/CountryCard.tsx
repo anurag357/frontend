@@ -1,6 +1,8 @@
 import { Country } from '@/types/country'
 import { getLocalTime } from '@/utils/time'
 import Link from 'next/link'
+import Image from 'next/image'
+
 
 export default function CountryCard({ country }: { country: Country }) {
   const styles = {
@@ -41,7 +43,7 @@ export default function CountryCard({ country }: { country: Country }) {
         }
         onMouseLeave={(e) => (e.currentTarget.style.boxShadow = 'none')}
       >
-        <img
+        <Image
           src={country.flags.svg}
           alt={`Flag of ${country.name.common}`}
           style={styles.image}

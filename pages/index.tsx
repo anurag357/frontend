@@ -4,7 +4,7 @@ import { getAllCountries } from '@/services/api'
 import CountryCard from '@/components/CountryCard'
 import Filters from '@/components/Filters'
 import SearchBar from '@/components/SearchBar'
-import PopulationChart from '@/components/PopulationChart'
+// import PopulationChart from '@/components/PopulationChart'
 
 export default function Home() {
   const [countries, setCountries] = useState<Country[]>([])
